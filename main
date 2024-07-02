@@ -1,7 +1,4 @@
-_G.BaseChoice = "Nuke Base" -- Military Base, Drone Base, Nuke Base
 repeat wait() until game:IsLoaded()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/micorockslol123/idek/main/nullsecurity'))()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/micorockslol123/idek/main/nullwhitelist'))()
 if _G.BaseChoice == "Military Base" then
 _G.BaseNumber = 1
 elseif _G.BaseChoice == "Drone Base" then
@@ -9,6 +6,8 @@ _G.BaseNumber = 2
 elseif _G.BaseChoice == "Nuke Base" then
 _G.BaseNumber = 3
 end
+loadstring(game:HttpGet('https://raw.githubusercontent.com/micorockslol123/idek/main/nullsecurity'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/micorockslol123/idek/main/nullwhitelist'))()
 game.Players.LocalPlayer.PlayerGui.BaseUI.Enabled = false
 local args = {
     [1] = _G.BaseNumber
@@ -175,12 +174,10 @@ local Window = Library:CreateWindow({
 local Tabs = {
     AutoFarm = Window:AddTab('AutoFarm'), 
     Combat = Window:AddTab('Combat'),
-    ['Elite Missions'] = Window:AddTab('Elite Missions WIP'),
     ['UI Settings'] = Window:AddTab('UI Settings'),
 }
 local TabBox = Tabs.AutoFarm:AddLeftTabbox() -- Add Tabbox on left side
 local TabBox2 = Tabs.Combat:AddLeftTabbox()
-
 local Tab1 = TabBox:AddTab('Base Farm')
 local Tab2 = TabBox:AddTab('Crate/Event Farm')
 local Tab3 = TabBox2:AddTab('KillAura')
